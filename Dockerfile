@@ -42,7 +42,7 @@ RUN cd compose-$DOCKER_COMPOSE_VER \
     && mkdir /dist \
     && mv dist/docker-compose /dist/docker-compose
 
-FROM arm32v7/debian:stretch-slim
+FROM arm32v7/debian:buster-slim
 
 COPY --from=builder /dist/docker-compose /tmp/docker-compose
 
